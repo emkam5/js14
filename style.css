@@ -1,0 +1,58 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f4f8; /* Светлый фон */
+}
+
+.tabs-container {
+    max-width: 600px; /* Ширина контейнера */
+    margin: 50px auto; /* Центрирование контейнера */
+    border: 1px solid #ccc; /* Граница контейнера */
+    border-radius: 10px; /* Закругленные углы */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); /* Тень */
+}
+
+.tabs {
+    list-style: none; /* Убираем маркеры */
+    display: flex; /* Flexbox для горизонтального отображения */
+    border-bottom: 1px solid #ccc; /* Нижняя граница для вкладок */
+    padding: 0;
+    margin: 0;
+}
+
+.tab {
+    padding: 15px 20px; /* Отступы */
+    cursor: pointer; /* Указатель курсора */
+    transition: background-color 0.3s, color 0.3s; /* Плавные переходы */
+}
+
+.tab:hover {
+    background-color: #3498db; /* Цвет при наведении */
+    color: white; /* Цвет текста при наведении */
+}
+
+.tab.active {
+    background-color: #2980b9; /* Цвет активной вкладки */
+    color: white; /* Цвет текста активной вкладки */
+}
+
+.tabs-content {
+    padding: 20px; /* Отступы содержимого */
+    animation: fadeIn 0.5s; /* Анимация появления */
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.tab-content {
+    display: none; /* Скрытие содержимого по умолчанию */
+}
+
+.tab-content.active {
+    display: block; /* Отображение активного содержимого */
+    opacity: 1; /* Полная видимость */
+    transition: opacity 0.5s; /* Плавное появление */
+}
